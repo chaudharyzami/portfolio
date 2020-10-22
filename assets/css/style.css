@@ -63,6 +63,12 @@ header{
     
 }
 
+.mainheading{
+    text-align: center;
+    margin-bottom: 20px;
+    color:var(--primaryColor);
+}
+
 .logo h1{
     line-height: 65px;
     
@@ -125,7 +131,7 @@ ul li a.active{
     }
 
     #skills span.adobe{
-        left:70%;
+        left:81%;
     }
 
 
@@ -133,7 +139,7 @@ ul li a.active{
     height:5px;
     background: #999;
     border:1px solid var(--primaryColor);
-   
+   overflow: hidden;
 }
 
 .blankbar a:before{
@@ -144,6 +150,7 @@ ul li a.active{
     bottom: 2px;
     width: 100%;
     background: rgba(255, 255, 255, .03);
+    overflow: hidden;
  
 
 }
@@ -267,6 +274,7 @@ ul li a.active{
 }
 #workExample{
     font-family: var(--fontprimary);
+    
 }
 
 #workExample img{
@@ -277,6 +285,8 @@ ul li a.active{
 
 #workExample p{
     font-size:18px;
+    
+    
 }
 
 #workExample button{
@@ -310,13 +320,18 @@ ul li a.active{
 footer{
    
     background: var(--primaryColor);
-    padding-top:20px;
-    position: relative;
-    margin-bottom: 0px;
+    
+  
+    
 }
 footer p{
     font-family: var(--fontprimary);
-   
+  margin-top:28px;
+    
+}
+
+footer p.copy{
+    margin-top:60px;
     
 }
 
@@ -348,12 +363,15 @@ footer ul li a{
 
 footer ul li:nth-child(1),
 li:nth-child(2){
-    margin-right:25px;
+    margin-right:20px;
 }
 
 
 footer p.number span{
     animation: num 0.5s linear infinite;
+    margin-left:20px;
+    margin-top:5px;
+    border-bottom:2px solid #000;
 }
 
 @keyframes num{
@@ -365,6 +383,13 @@ footer p.number span{
     }
 }
 
+
+@media (max-width: 992px){
+    .mainheading{
+        margin-top: 30px;
+    margin-bottom: 30px;
+    }
+}
 
 
 
@@ -436,15 +461,30 @@ footer p.number span{
         text-align: center;
     }
 
-    #about img{
+    /* #about img{
         margin-left:130px;
 
-    }
+    } */
 
     #about p{
         margin-top: 20px;
         font-size: 16px;
     }
+
+    #skills h4{
+        font-size: 16px;
+    }
+
+    
+
+    #skills span.percent {
+        top: 0px;
+        left: 87%;
+    }
+    #skills span.adobe{
+        left:70%;
+    }
+
 
     #workExample p{
         font-size:16px;
@@ -456,11 +496,11 @@ footer p.number span{
     }
 
     footer {
-        height: 100px;
+        height:80px;
         background: var(--primaryColor);
-        line-height: 22px;
+        line-height: 0;
         text-align: center;
-        padding:10px;
+        
       
     }
     footer ul{
@@ -469,14 +509,56 @@ footer p.number span{
     }
 
     footer p{
-            margin:0px;
+            margin:15px;
             display:inline-block;
+    }
+
+    footer p.copy {
+        margin-top: 57px;
+        font-size: 14px;
     }
 
 }
 
+@media (min-width:576px)  and (max-width:768px){
+    #about img{
+        margin-left:140px;
+    }
+    
+    #skills span.adobe{
+        left:80%;
+    }
+    footer{
+        height:144px;
+    }
+}
+
+@media (max-width:576px){
+    #about img{
+        margin-left: 140px;
+    }
+
+    footer{
+        height:144px;
+    }
+
+    #skills span.percent {
+        top: 0px;
+        left: 87%;
+        font-size: 14px;
+    }
+
+    
+}
+
 
 @media (max-width:360px){
+
+
+    .mainheading {
+        margin-bottom: 0px;
+        margin-top: 15px;
+    }
 
     .logo h1{
         font-size:30px;
@@ -492,14 +574,19 @@ footer p.number span{
         font-size: 16px;
     }
 
+    #skills span.adobe{
+        left:73%;
+    }
+
     footer{
         line-height:15px;
     }
     footer p{
         font-size: 10px;
-        line-height:15px;
+        line-height:14px;
         letter-spacing:2px;
-        color:var(--fontColor2)
+        color:var(--fontColor2);
+        margin:0px;
     }
 
     footer p.number{
