@@ -84,8 +84,8 @@ ul li a:hover{
 }
 
 ul li a.active{
-    background: var(--secondryColor);
-    border-radius: 5px;
+   background: var(--secondryColor);
+    color:var(--fontColor1);
 }
 
 #about{
@@ -382,6 +382,10 @@ footer p.number span{
             
         }
 
+        .menubarbtn:hover{
+            background: var(--primaryColor);
+        }
+
         header ul{
             position: fixed;
            width:100%;
@@ -393,19 +397,26 @@ footer p.number span{
            z-index: 10;
            padding:0px;
            line-height: 50px;
-           
+          
            transition: all 0.5s;
             
         }
 
         header ul li a{
             display:block;
+            
           
         }
 
-        header ul li a.active,a:hover{
-          
-            background:var(--secondryColor);
+        ul li a.active{
+            color:var(--primaryColor);
+            background: #000;
+        }
+
+        header ul li a:hover{
+           background:#000;
+            border-bottom:1px solid var(--primaryColor);
+            color:var(--primaryColor);
         }
 
         header ul.show{
@@ -460,6 +471,39 @@ footer p.number span{
     footer p{
             margin:0px;
             display:inline-block;
+    }
+
+}
+
+
+@media (max-width:360px){
+
+    .logo h1{
+        font-size:30px;
+        line-height: 70px;
+
+    }
+
+    #about img{
+        margin-left:65px;
+    }
+
+    #skills h4{
+        font-size: 16px;
+    }
+
+    footer{
+        line-height:15px;
+    }
+    footer p{
+        font-size: 10px;
+        line-height:15px;
+        letter-spacing:2px;
+        color:var(--fontColor2)
+    }
+
+    footer p.number{
+        font-size: 16px;
     }
 
 }
