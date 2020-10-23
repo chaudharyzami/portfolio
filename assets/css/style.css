@@ -10,6 +10,7 @@ body{
     color:#fff;
     background:#000;
     position: relative;
+   
 }
 
 h1,h2,h3{
@@ -98,6 +99,11 @@ ul li a.active{
     display:flex;
     text-align: start;
     
+}
+
+#about h4{
+    text-align:center;
+    color:var(--primaryColor);
 }
 
 #about h1 span{
@@ -314,14 +320,65 @@ ul li a.active{
     color:var(--fontColor2);
 }
 
+#contact{
+    background:url(../images/contactback.jpeg);
+    background-position: center;
+   background-repeat: repeat;
+   transition: all 0.5 ease-in-out;
+   
+}
+
 #contact label{
-     color:var(--primaryColor);
+     display:none;
+}
+
+.contactform input{
+    width:50%;
+    background: transparent;
+    border:none;
+    /* color:var(--fontColor1); */
+    border-bottom: 1px solid var(--primaryColor);
+   
+}
+
+.contactform input.submit{
+    width:50%;
+}
+
+.contactform input::placeholder{
+     color:#fff;
+      
+}
+
+.contactform input:active{
+    border:none;
+}
+
+.contactform input:focus{
+    background: transparent;
+    color:var(--fontprimary);
+    /* border:1px solid var(--primaryColor); */
+    
+}
+
+.contactform input.submit{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border:transparent;
+    background: var(--primaryColor);
+    border-radius: 10px;
+    color:var(--fontColor1);
+}
+
+.contactform input.submit:hover{
+    border:1px solid var(--primaryColor);
+    background: var(--secondryColor);
 }
 
 footer{
         /* position:sticky;
         bottom: 0; */
-        
+        margin-top:50px;
        width:100%;
      background: var(--primaryColor);
     
@@ -388,10 +445,18 @@ footer p.number span{
 }
 
 
-@media (max-width: 992px){
+@media screen and (max-width: 992px){
     .mainheading{
         margin-top: 30px;
     margin-bottom: 30px;
+    }
+
+    header{
+        margin-bottom:30px;
+    }
+
+    .mainheading{
+        margin-top:10px;
     }
 }
 
@@ -531,37 +596,84 @@ footer p.number span{
     
     #skills span.adobe{
         left:80%;
-    }
-    footer{
-        height:144px;
+    } 
+     footer{
+        height:144px; 
     }
 }
 
-@media (max-width:576px){
-    #about img{
-        margin-left: 140px;
+@media screen and (max-width:576px){
+
+     .mainheading{
+         margin-top:0px;
+     }
+     #about img{
+        margin-left: 144px;
+       
+    } 
+
+    #about h4{
+        margin-top:10px;
     }
 
-    footer{
-        height:144px;
-    }
-
+    
     #skills span.percent {
         top: 0px;
         left: 87%;
         font-size: 14px;
+    }
+    #skills span.adobe{
+        left:80%;
+    }
+
+
+    footer{
+        height:144px;
+    }
+
+    footer ul {
+        margin-top:10px;
+    }
+
+    footer p{
+        margin-bottom:10px;
     }
 
     
 }
 
 
-@media (max-width:360px){
+@media (min-width:360px) and (max-width:576px){
+    #about img{
+        margin-left:70px;
+    }
+
+        footer ul {
+           margin-top:5px;
+        }
+    
+        footer p.copy{
+            margin:16px 0px;
+            line-height:20px;
+        }
+
+        #skills span.adobe{
+            left:72%;
+        }
+    
+}
+
+
+@media screen and (max-width:360px){
 
 
     .mainheading {
         margin-bottom: 0px;
         margin-top: 15px;
+    }
+
+    #about h4{
+        text-align:left;
     }
 
     .logo h1{
@@ -571,7 +683,7 @@ footer p.number span{
     }
 
     #about img{
-        margin-left:65px;
+        margin-left:60px;
     }
 
     #skills h4{
@@ -595,6 +707,10 @@ footer p.number span{
 
     footer p.number{
         font-size: 16px;
+    }
+
+    footer p.copy{
+        margin-top:30px;
     }
 
 }
