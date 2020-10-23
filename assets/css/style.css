@@ -60,7 +60,7 @@ header{
     top:0;
     left:0;
     z-index: 1;
-    
+    margin-bottom:60px;
 }
 
 .mainheading{
@@ -97,6 +97,7 @@ ul li a.active{
 #about{
     display:flex;
     text-align: start;
+    
 }
 
 #about h1 span{
@@ -120,7 +121,7 @@ ul li a.active{
         overflow: hidden;
         -webkit-overflow:hidden;
         -moz-overflow:hidden;
-       
+        
     }
 
     #skills span.percent{
@@ -318,8 +319,11 @@ ul li a.active{
 }
 
 footer{
-   
-    background: var(--primaryColor);
+        /* position:sticky;
+        bottom: 0; */
+        
+       width:100%;
+     background: var(--primaryColor);
     
   
     
