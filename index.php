@@ -23,7 +23,7 @@
                 <div class="col-md-8">
                     <ul class="float-md-right">
                         <li>
-                            <a href="index.html" class="active">Home</a>
+                            <a href="index.php" class="active">Home</a>
                             <a href="about.html">About</a>
                             <a href="skills.html">Skills</a>
                             <a href="practice.html">Practice</a>
@@ -193,6 +193,25 @@
     <div id="contact">
 
         <div class="container contactform">
+
+        <?php
+
+
+
+                $message ="";
+                if(isset($_GET)['error'])){
+                    $message = "Please Fill in the Blanks";
+                    echo '<div class="alert alert-danger">'.$message.'</div>';
+                }
+
+                $message ="";
+                if(isset($_GET)['success'])){
+                    $message = "Your Message Has Been Sent";
+                    echo '<div class="alert alert-success">'.$message.'</div>';
+                }
+
+        
+        ?>
             <form action="contact.php" method="post">
                 <h4 class="mainheading">Say Hello</h4>
                 <div class="row">
