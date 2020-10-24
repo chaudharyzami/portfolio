@@ -348,7 +348,7 @@ ul li a.active{
         border:none;
 }
 
-textarea{
+#contact textarea{
         width:50%;
         background: transparent;
         border:none;
@@ -358,7 +358,7 @@ textarea{
     
 }
 
-textarea:focus{
+#contact textarea:focus{
         background: transparent;
         color:var(--fontprimary);
 }
