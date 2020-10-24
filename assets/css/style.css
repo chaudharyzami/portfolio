@@ -324,9 +324,10 @@ ul li a.active{
         width:50%;
         background: transparent;
         border:none;
-        /* color:var(--fontColor1); */
+        color:var(--fontColor1);
         border-bottom: 1px solid var(--primaryColor);
 }
+
 
 .contactform input.submit{
          width:50%;
@@ -344,7 +345,26 @@ ul li a.active{
 .contactform input:focus{
         background: transparent;
         color:var(--fontprimary);
+        border:none;
 }
+
+textarea{
+        width:50%;
+        background: transparent;
+        border:none;
+        color:var(--fontColor1);
+        border-bottom: 1px solid var(--primaryColor);
+        color:var(--fontColor1);
+    
+}
+
+textarea:focus{
+        background: transparent;
+        color:var(--fontprimary);
+}
+
+
+
 
 .contactform input.submit{
         text-transform: uppercase;
@@ -423,6 +443,7 @@ footer p.number span{
         }
 }
 
+/* media queriws for 992 */
 
 @media screen and (max-width: 992px){
         .mainheading{
